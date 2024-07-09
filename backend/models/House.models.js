@@ -22,11 +22,13 @@ const houseSchema = new mongoose.Schema({
         required : true
     },
     price: {
-        type: Number
+        type: Number,
+        required: true
     },
     amenities: {
-        type: Array
+        type: Array,
+        required: true
     }
-})
+}, {timestamps: true})
 
 module.exports = mongoose.model('House', houseSchema)
