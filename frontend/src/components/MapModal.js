@@ -7,8 +7,8 @@ const mapContainerStyle = {
 }
 
 const center = {
-    lat: 20.5937, 
-    lng: 78.9629
+    lat: 28.6474, 
+    lng: 77.1302
 }
 
 const MapModal = ({ setCoordinates, coordinates }) => {
@@ -31,7 +31,7 @@ const MapModal = ({ setCoordinates, coordinates }) => {
     return (
         <GoogleMap
             mapContainerStyle={mapContainerStyle}
-            zoom={6}
+            zoom={7}
             center={selected || center}
             onClick={handleMapClick}
         >
