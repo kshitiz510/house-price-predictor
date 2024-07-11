@@ -28,7 +28,7 @@ const Form = ({ setResults }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="max-w-xl mx-auto bg-white shadow-md rounded px-8 pt-6 pb-4 mb-4">
+        <form onSubmit={handleSubmit} className="max-w-xl mx-auto bg-white rounded px-8 pb-4">
             <div className="mb-4 w-80">
                 <label className="block text-gray-700 text-base font-bold mb-2" htmlFor="address">
                     Address
