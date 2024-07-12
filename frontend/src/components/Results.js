@@ -32,7 +32,7 @@ const Results = ({ results }) => {
             <div className="bg-white rounded">
                 <h2 className="text-xl font-bold mb-2">Predicted Price</h2>
                 <div className="bg-gray-200 px-4 py-2 rounded-lg mb-2">
-                    <h3 className="text-lg font-bold text-indigo-600">Price: ${results.price.toFixed(2)}</h3>
+                    <h3 className="text-lg font-bold text-indigo-600">Price: Rs.{results.price.toFixed(0)}</h3>
                 </div>
             </div>
             <div className="bg-white rounded mt-4">
