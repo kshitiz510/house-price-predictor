@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
             const placesResponse = await axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json', {
                 params: {
                     location: `${lat},${lng}`,
-                    radius: 1500,
+                    radius: 2000,
                     type,
                     key: process.env.GOOGLE_MAPS_API_KEY
                 }
