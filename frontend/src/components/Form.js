@@ -63,7 +63,7 @@ const Form = () => {
                         name="address"
                         value={formData.address}
                         onChange={handleChange}
-                        onClick={openMap} // Open the map modal on click
+                        onClick={openMap} 
                         className="shadow-md appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         placeholder="Enter Address"
                         required

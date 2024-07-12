@@ -24,7 +24,10 @@ router.post('/', async (req, res) => {
         const { lat, lng } = location
         console.log('Location: ', { lat, lng })
 
-        const types = ['school', 'hospital', 'park', 'supermarket', 'food']
+        const types = [
+            'school', 'hospital', 'park', 'supermarket', 'food',
+            'gym', 'library', 'pharmacy', 'bank', 'restaurant'
+        ]
         let topAmenities = []
 
         for (const type of types) {
