@@ -16,12 +16,12 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-2 ml-10">
             <Link to="/" className="py-5 px-3 text-gray-700 hover:text-gray-900">Buy</Link>
             <Link to="/" className="py-5 px-3 text-gray-700 hover:text-gray-900">Sell</Link>
             {/* <Link to="/" className="py-5 px-3 text-gray-700 hover:text-gray-900">Rent</Link> */}
-            <Link to="/predict" className="py-5 px-3 text-gray-700 hover:text-gray-900">Predict</Link>
             <Link to="/" className="py-5 px-3 text-gray-700 hover:text-gray-900">Saved Homes</Link>
+            <Link to="/predict" className="py-5 px-3 text-gray-700 hover:text-gray-900">Predict</Link>
             <Link to="/" className="py-5 px-3 text-gray-700 hover:text-gray-900">Contact</Link>
           </div>
           <div className="flex items-center space-x-1.5">
