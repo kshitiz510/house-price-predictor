@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import Modal from 'react-modal'
 import MapModal from './MapModal'
+import Results from './Results'
 
-const Form = ({ setResults }) => {
+const Form = () => {
     const [formData, setFormData] = useState({
         address: '',
         area: '',
@@ -13,6 +14,7 @@ const Form = ({ setResults }) => {
     })
     const [isMapOpen, setIsMapOpen] = useState(false)
     const [coordinates, setCoordinates] = useState(null)
+    const [results, setResults] = useState(null)
 
     const handleChange = (e) => {
         setFormData({
@@ -33,10 +35,6 @@ const Form = ({ setResults }) => {
 
     const openMap = () => {
         setIsMapOpen(true)
-    }
-
-    const closeMap = () => {
-        setIsMapOpen(false)
     }
 
     const handleMapClose = async () => {
@@ -66,7 +64,7 @@ const Form = ({ setResults }) => {
                         value={formData.address}
                         onChange={handleChange}
                         onClick={openMap} // Open the map modal on click
-                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow-md appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         placeholder="Enter Address"
                         required
                     />
@@ -82,7 +80,7 @@ const Form = ({ setResults }) => {
                         name="area"
                         value={formData.area}
                         onChange={handleChange}
-                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow-md appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         placeholder="Enter Area"
                         required
                     />
@@ -98,7 +96,7 @@ const Form = ({ setResults }) => {
                         name="bedrooms"
                         value={formData.bedrooms}
                         onChange={handleChange}
-                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow-md appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         placeholder="Enter Bedrooms"
                         required
                     />
@@ -114,7 +112,7 @@ const Form = ({ setResults }) => {
                         name="bathrooms"
                         value={formData.bathrooms}
                         onChange={handleChange}
-                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow-md appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         placeholder="Enter Bathrooms"
                         required
                     />
@@ -130,7 +128,7 @@ const Form = ({ setResults }) => {
                         name="floor"
                         value={formData.floor}
                         onChange={handleChange}
-                        className="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow-md appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         placeholder="Enter Floor Level"
                         required    
                     />
@@ -158,6 +156,7 @@ const Form = ({ setResults }) => {
                     </button>
                 </div>
             </Modal>
+            {results && <Results results={results} />}
         </div>
     )
 }

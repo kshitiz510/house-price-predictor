@@ -13,7 +13,7 @@ const HomePage = () => {
             }}
         >
             <div className="absolute top-1/3 right-10 text-right">
-                <h1 className="text-5xl font-bold text-black">Welcome to Real Estate</h1>
+                <h1 className="text-5xl font-bold text-black">Welcome to UrbanNest</h1>
                 <p className="mt-4 text-xl text-black">Find your dream home with us</p>
             </div>
         </div>
